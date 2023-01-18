@@ -1,0 +1,84 @@
+.container {
+  height: 350px;
+  width: 257px;
+  clip-path: path(
+    'M 240.8912 0.8096 H 206.5712 C 200.171 0.8304 193.9212 2.7519 188.6139 6.3303 C 183.3075 9.9088 179.1838 14.9829 176.7656 20.9088 C 172.788 30.5929 166.0208 38.8758 157.3246 44.7051 C 148.6276 50.5343 138.395 53.6466 127.9256 53.6466 C 117.4562 53.6466 107.2236 50.5343 98.5274 44.7051 C 89.8304 38.8758 83.0636 30.5929 79.0857 20.9088 C 76.6675 14.9829 72.5434 9.9088 67.2368 6.3303 C 61.9303 2.7519 55.6803 0.8304 49.28 0.8096 H 14.96 C 10.9923 0.8096 7.1873 2.3858 4.3817 5.1913 C 1.5762 7.9969 0 11.802 0 15.7696 V 293.92 C 0 297.8879 1.5762 301.693 4.3817 304.4985 C 7.1873 307.3039 10.9923 308.88 14.96 308.88 H 240.8912 C 244.8591 308.88 248.6642 307.3039 251.4697 304.4985 C 254.2751 301.693 255.8512 297.8879 255.8512 293.92 V 15.7696 C 255.8512 11.802 254.2751 7.9969 251.4697 5.1913 C 248.6642 2.3858 244.8591 0.8096 240.8912 0.8096 Z'
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(98, 106, 136, 0.1) 0%,
+    rgba(46, 49, 73, 0.1) 107.43%
+  );
+  backdrop-filter: blur(50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 20px 20px;
+}
+
+.container h1 {
+  color: #737bae;
+  opacity: 0.9;
+}
+
+.innerContainer {
+  background: linear-gradient(0deg, #14172b, #14172b),
+    linear-gradient(
+      180deg,
+      rgba(236, 240, 255, 0.1) 0%,
+      rgba(59, 63, 87, 0) 100%
+    );
+  border: 1px solid;
+  border-radius: 17px;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(236, 240, 255, 0.1) 0%,
+    rgba(59, 63, 87, 0) 100%
+  );
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 31px;
+  text-align: center;
+  color: #ecf0ff;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+}
+
+.innerContainer span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 31px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.subHeading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 31px;
+  color: #5a5f7d;
+  opacity: 0.9;
+}
+
+.circle {
+  clip-path: path(
+    'M 44.3257 87.9296 C 68.6262 87.9296 88.3256 68.2302 88.3256 43.9296 C 88.3256 19.6291 68.6262 -0.0704 44.3257 -0.0704 C 20.0252 -0.0704 0.3257 19.6291 0.3257 43.9296 C 0.3257 68.2302 20.0252 87.9296 44.3257 87.9296 Z'
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(
+    180deg,
+    rgba(98, 106, 136, 0.1) 0%,
+    rgba(220, 31, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(50px);
+  margin-bottom: -45px;
+}

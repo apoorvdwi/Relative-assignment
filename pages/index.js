@@ -1,11 +1,55 @@
 import Head from 'next/head';
 import { Tomorrow } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
+import TrendingCard from '@/components/TrendingCard';
 
 const tomorrow = Tomorrow({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
+
+const data = [
+  {
+    topIcon: '/icons/bitcoin.svg',
+    title: 'Bitcoin (BTC)',
+    price: '$31,812.80',
+    gain: '+10%',
+    tvl: '$60,000',
+    popularPairs: ['/icons/solana.svg', '/icons/eth.svg', '/icons/binance.svg'],
+  },
+  {
+    topIcon: '/icons/solana.svg',
+    title: 'Solana (SOL)',
+    price: '$32.83',
+    gain: '-12.32%',
+    tvl: '$60,000',
+    popularPairs: ['/icons/bitcoin.svg', '/icons/eth.svg', '/icons/binance.svg'],
+  },
+  {
+    topIcon: '/icons/eth.svg',
+    title: 'Ethereum (ETH)',
+    price: '$1,466.45',
+    gain: '-11.93%',
+    tvl: '$60,000',
+    popularPairs: ['/icons/solana.svg', '/icons/bitcoin.svg', '/icons/binance.svg'],
+  },
+  {
+    topIcon: '/icons/binance.svg',
+    title: 'Binance USD (BUSD)',
+    price: '$1.00',
+    gain: '+0.26%',
+    tvl: '$60,000',
+    popularPairs: ['/icons/solana.svg', '/icons/eth.svg', '/icons/binance.svg'],
+  },
+  {
+    topIcon: '/icons/shiba.svg',
+    title: 'Shiba Inu (SHIB)',
+    price: '$0.00000001948',
+    gain: '-8.1%',
+    tvl: '$60,000',
+    popularPairs: ['/icons/solana.svg', '/icons/eth.svg', '/icons/binance.svg'],
+  },
+];
 
 export default function Home() {
   return (
@@ -17,10 +61,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className="mx-20 mt-60">
+        <div className="mx-20 my-auto">
           <div className="flex gap-4">
-            <img src="/icons/trending.svg" alt='trending icon' />
+            <img src="/icons/trending.svg" alt="trending icon" />
             <p className={tomorrow.className}>Trending Assets</p>
+          </div>
+          <div className="flex gap-4 mt-16">
+            {data.map((item, index) => <TrendingCard key={index} {...item} />)}
           </div>
         </div>
       </main>
